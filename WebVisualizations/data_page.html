@@ -2,12 +2,30 @@
 <html lang="en-us">
     <head>
         <meta charset="utf=8">
+        <style type="text/css">
+            .standard-grid { width:100%; border-top:1px solid #b1b1b1; border-right:1px solid #b1b1b1; border-spacing: 0;}
+            .standard-grid th, .standard-grid td { text-align:left; border-bottom:1px solid #b1b1b1; border-left:1px solid #b1b1b1; padding:4px;}
+        </style>
+    
+        <!-- Ignite UI Required Combined CSS Files -->
+        <link href="http://cdn-na.infragistics.com/igniteui/2019.2/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+        <link href="http://cdn-na.infragistics.com/igniteui/2019.2/latest/css/structure/infragistics.css" rel="stylesheet" />
+    
+        <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    
+        <!-- Ignite UI Required Combined JavaScript Files -->
+        <script src="http://cdn-na.infragistics.com/igniteui/2019.2/latest/js/infragistics.core.js"></script>
+        <script src="http://cdn-na.infragistics.com/igniteui/2019.2/latest/js/infragistics.lob.js"></script>
+
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
         <title>Data Page</title>
     </head>
     <body>
@@ -32,6 +50,36 @@
               </ul>
             </div>
         </nav>
-        
+        <div class="container">
+                <table datasrc='#data'>
+                    <thead>
+                        <tr><TD> City ID </TD><TD> City </TD><TD> Cloudiness </TD>
+                        <TD> Country </TD><TD> Date </TD> <TD> Humidity </TD><TD> Lat </TD>
+                        <TD> Lng </TD><TD> Max Temp </TD><TD> Wind Speed </TD></tr>
+                    </thead>
+                      
+                    <tbody> <tr>
+                        <td><span datafld='City_ID'> </span></td>
+                        <td><span datafld='City'> </span></td>
+                        <td><span datafld='Cloudiness'> </span></td>
+                        <td><span datafld='Country'> </span></td>
+                        <td><span datafld='Date'> </span></td>
+                        <td><span datafld='Humidity'> </span></td>
+                        <td><span datafld='Lat'> </span></td>
+                        <td><span datafld='Lng'> </span></td>
+                        <td><span datafld='Max Temp'> </span></td>
+                        <td><span datafld='Wind Speed'> </span></td>
+                    </tbody>
+                      
+                </table>
+                      
+                      
+                <object ID=data classid="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83">
+                    <param nAme="Resources/cities.csv" value="Resources/cities.csv">
+                    <param nAme="UseHeader" value="true">
+                </object>    
+        </div>
     </body>
 </html>
+
+
